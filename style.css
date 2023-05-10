@@ -1,0 +1,300 @@
+/* mobile view first */
+html, body {
+  font-family: "Montserrat";
+  margin: 0 auto;
+  padding: 0;
+  height: 100%;
+}
+
+main {
+  color: darkslategray;
+  background: linear-gradient(to bottom, rgb(18, 55, 55), #c8ea8c);
+  height: 100%;
+  display: flex;
+}
+  
+/* nav bar styles */
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  background-color: darkslategrey;
+  background: linear-gradient(to bottom, darkslategray, rgb(18, 55, 55));
+  width: 100%;
+  height: 40px;
+  min-width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+li {
+  list-style-type: none ;
+}
+
+.li-section, .outside-link {
+  display: none;
+}
+
+#git-logo, #li-logo {
+  display: none;
+}
+
+/* git and LI links */
+.phone-view-nav {
+  display: flexbox;
+  position: sticky;
+  top: 10px;
+  left: 10px;
+  flex-direction: row;
+  justify-content: flex-start;
+  color: green;
+}
+
+.phone-view-nav:first-child {
+  top: 10px;
+  left: 10px;
+}
+
+.phone-view-nav:last-child {
+  top: 10px;
+  left: 90px;
+  margin-left: 2px;
+}
+
+.intro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction:column;
+  text-align: center;
+}
+
+.navigate-details {
+  color: rgb(223, 239, 153);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.hand-wave {
+  display: inline-block;
+  animation-name: wave-animation;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes wave-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  20% {
+    transform: rotate(10deg);
+  }
+  40% {
+    transform: rotate(-10deg);
+  }
+  60% {
+    transform: rotate(10deg);
+  }
+  80% {
+    transform: rotate(-10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.head-shot {
+  border: solid 1px rgb(215, 229, 151);
+  height: 200px;
+  border-radius: 33%;
+  margin: 0 20px;
+}
+
+.lists {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.page-list {
+  align-items: flex-start;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+.page-list li {
+  padding: 0.5px;
+  margin-bottom: 2px;
+}
+
+/* li font styling */
+.font-style{
+  color: black;
+  letter-spacing: 0.1rem;
+  text-decoration: none;
+  -webkit-text-stroke: .2px black;
+}
+
+.font-style1{
+  color: white;
+  letter-spacing: 0.1rem;
+  text-decoration: none;
+  -webkit-text-stroke: .2px black;
+}
+
+.resume-img {
+  width: 55px;
+  height: 50px;
+  margin-right: 15px;
+  margin-bottom: 15px;
+}
+
+#travel, #tech {
+  display: none;
+}
+
+#resume {
+  display: none;
+}
+#top-button {
+  display: none;
+  position: fixed;
+  bottom: 40px;
+  right: 100px;
+  z-index: 1;
+  border-color: rgb(17, 14, 2);
+}
+/* the footer */
+footer {
+  display: flex;
+  position: sticky;
+  width: 100%;
+  background: linear-gradient(to bottom, #c8ea8c, darkslategray);
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  bottom: 0;
+  height: 40px;
+}
+
+.footer-ul {
+  display: flex;
+  flex-direction:row;
+  visibility: visible;
+  list-style-type: none;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  margin: 0;
+}
+
+.footer-li {
+  margin: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+footer img {
+  width: 25px;
+  height: 25px;
+  opacity: .75;
+  margin: 0;
+}
+
+@media (min-width: 800px) {
+  .nav-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+
+  nav {
+    background-color: darkslategrey;
+    width: 100%;
+    height: 40px;
+    position: sticky;
+    z-index: 1;
+  }
+  
+  .nav-ul {
+    display: flex;
+    flex-direction:row;
+    visibility: visible;
+    list-style-type: none;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+  }
+
+  .li-section {
+    display:flex;
+    margin: 0px 17px;
+    color: white;
+    line-height: 1.5px;
+    padding-right: 15px;
+    letter-spacing: 0.1rem;
+    text-decoration: none;
+    list-style-type: none;
+    align-items: center;
+    }
+
+  .li-section:hover {
+    color: #a8e51a;
+    transform: scale(0.9);
+    opacity: 0.9;
+    }
+
+  .outside-link {
+    width: 30px;
+    height: 30px;
+    margin-right: 15px;
+    }
+
+    #li-logo, #git-logo {
+    display: flex;
+    }
+
+  .outside-link:hover {
+    transform: scale(0.9);
+  }    
+  
+  .phone-view-nav {
+    display: none;    
+  }
+
+  .intro {
+    flex-direction: row;
+    text-align: left;
+    margin: 0 auto;
+  }
+
+  .navigate-details {
+    text-align: left;
+  }
+
+  .head-shot {
+    margin: 0; 
+    margin-right: 20px; 
+  }
+
+  .lists {
+    flex-direction: row;
+    justify-content: flex-start; 
+    align-items: flex-start; 
+    text-align: left;
+  }
+
+  .proj-li{
+    margin: 0 auto;
+  }
+  
+}
