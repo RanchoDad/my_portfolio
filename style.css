@@ -68,6 +68,7 @@ li {
   align-items: center;
   flex-direction:column;
   text-align: center;
+  margin: 0 auto;
 }
 
 .navigate-details {
@@ -113,6 +114,7 @@ li {
   height: 200px;
   border-radius: 33%;
   margin: 0 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .lists {
@@ -137,18 +139,13 @@ li {
 }
 
 /* li font styling */
-.font-style{
-  color: black;
-  letter-spacing: 0.1rem;
-  text-decoration: none;
-  -webkit-text-stroke: .2px black;
-}
+
 
 .font-style1{
   color: white;
   letter-spacing: 0.1rem;
   text-decoration: none;
-  -webkit-text-stroke: .2px black;
+  box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.4);
 }
 
 .resume-img {
@@ -156,6 +153,7 @@ li {
   height: 50px;
   margin-right: 15px;
   margin-bottom: 15px;
+  border-radius: 10%;
 }
 
 #travel, #tech {
@@ -165,18 +163,86 @@ li {
 #resume {
   display: none;
 }
-#top-button {
+
+.resume-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Style the resume document */
+#overlay {
   display: none;
   position: fixed;
-  bottom: 40px;
-  right: 100px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
   z-index: 1;
-  border-color: rgb(17, 14, 2);
+  display: none;
+}
+
+#resume-content {
+  display: none;
+  position: fixed;
+  top: 20%;
+  left: 37.5%;
+  z-index: 2;
+  overflow: auto;
+  background-color: rgb(146, 141, 141);
+  opacity: 1;
+  border-radius: 10%;
+}
+
+.modal-content {
+  background-color: darkslategray;
+  color: rgb(199, 184, 124);
+  letter-spacing: 0.1rem;
+  margin: 5% auto;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.3);
+  width: 90%;
+  max-width: 600px;
+  text-align: center;
+  border-radius: 10%;
+  font-size: clamp(0.75rem, 1.5vw 2 rem);
+}
+
+#modal {
+  cursor: pointer;
+}
+.close-button {
+  position: absolute;
+  color: black;
+  top: 0;
+  right: 0;
+  padding: 10px;
+  border: none;
+  background: none;
+  font-size: 25px;
+  font-weight: bold;
+  cursor: pointer;
+}
+/* button to the top */
+#top-button {
+  background: linear-gradient(to top, rgb(18, 55, 55), #c8ea8c);
+  position: fixed;
+  color: white;
+  bottom: 40px;
+  right: 300px;
+  z-index: 1;
+  border-color:  #c8ea8c;
+}
+
+#top-button:hover {
+  box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.4);
 }
 /* the footer */
 footer {
   display: flex;
-  position: sticky;
   width: 100%;
   background: linear-gradient(to bottom, #c8ea8c, darkslategray);
   flex-direction: row;
