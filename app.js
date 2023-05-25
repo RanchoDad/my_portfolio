@@ -19,7 +19,7 @@ clickResumeDeets.addEventListener("click", function () {
   overlay.style.display = "block";
 });
 
-overlay.addEventListener("click", function(){
+overlay.addEventListener("click", function(e){
   if (e.target === overlay) {
     modal.style.display = "none";
     overlay.style.display ="none";
@@ -29,6 +29,7 @@ overlay.addEventListener("click", function(){
 closeButton.addEventListener("click", function (e) {
   if (e.target === closeButton) {
     modal.style.display = "none";
-    overlay1.style.display = "none";
+    overlay.style.display = "none";
   }
 });
+
